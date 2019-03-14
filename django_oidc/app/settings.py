@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'oidc_provider',
     'django_extensions',
+    'oidc',
 ]
 
 MIDDLEWARE = [
@@ -108,5 +109,5 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/accounts/login/'
 
 OIDC_TOKEN_EXPIRE = 60 * 10
-OIDC_USERINFO = 'app.oidc_provider_settings.userinfo'
-OIDC_EXTRA_SCOPE_CLAIMS = 'app.oidc_provider_settings.CustomScopeClaims'
+# OIDC_USERINFO = 'oidc.oidc_settings.userinfo'
+OIDC_EXTRA_SCOPE_CLAIMS = 'oidc.oidc_settings.CustomScopeClaims'

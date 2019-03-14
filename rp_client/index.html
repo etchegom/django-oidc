@@ -45,7 +45,7 @@
         // Make an authorization request if the user click the login button.
         $('#login-button').click(function (event) {
             OIDC.login({
-                scope : 'openid profile email api',
+                scope : 'openid profile email phone address foo',
                 response_type : 'id_token token'
             });
         });

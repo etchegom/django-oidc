@@ -57,3 +57,13 @@ https://medium.com/@darutk/diagrams-of-all-the-openid-connect-flows-6968e3990660
 https://connect2id.com/products/server/docs/api
 https://security.stackexchange.com/questions/129928/oidc-flow-for-spa-and-restful-api
 https://developer.okta.com/blog/2017/07/25/oidc-primer-part-1
+
+
+
+### Implicit flow
+
+- User navigates to SPA, which redirects user to IdP to sign in.
+- User signs in (and authorizes the application, if needed).
+- IdP returns user to SPA with Access Token and ID Token.
+- JavaScript code in SPA stores the Access Token and ID Token in the browser's localStorage and sends the Access Token to the REST API server for every request it makes (usually as an Authorization: Bearer <access token> header).
+- If needed, REST API Server checks the validity of the Access Token by talking to the IdP. (Often, signing the token in the IdP and verifying that signature will be enough, and no communication is actually necessary.)
