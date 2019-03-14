@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'djoser',
     'oidc_provider',
     'django_extensions',
 ]
@@ -119,26 +117,6 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = '/accounts/login/'
 
-# OIDC_USERINFO = 'myproject.oidc_provider_settings.userinfo'
-
-#
-# DRF settings
-#
-
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAdminUser',
-    ),
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
-    ),
-    'DEFAULT_PARSER_CLASSES': (
-        'rest_framework.parsers.JSONParser',
-        'rest_framework.parsers.FormParser',
-        'rest_framework.parsers.MultiPartParser'
-    )
-}
+OIDC_TOKEN_EXPIRE = 60 * 2
+OIDC_USERINFO = 'django_oidc.oidc_provider_settings.userinfo'
+OIDC_EXTRA_SCOPE_CLAIMS = 'django_oidc.oidc_provider_settings.CustomScopeClaims'

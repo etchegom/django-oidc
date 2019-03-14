@@ -4,6 +4,5 @@ from django.urls import path, include
 
 urlpatterns = [
     url(r'^', include('oidc_provider.urls', namespace='oidc_provider')),
-    path('admin/', admin.site.urls),
-    url(r'^auth/', include('djoser.urls')),
+    path('admin/', admin.site.urls)
 ]

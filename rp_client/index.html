@@ -38,14 +38,14 @@
         // Make userinfo request using access_token.
         if (token !== null) {
             $.get('http://localhost:8000/userinfo/?access_token='+token, function( data ) {
-                alert('USERINFO: '+ JSON.stringify(data));
+                alert(JSON.stringify(data));
             });
         }
 
         // Make an authorization request if the user click the login button.
         $('#login-button').click(function (event) {
             OIDC.login({
-                scope : 'openid profile email',
+                scope : 'openid profile email api',
                 response_type : 'id_token token'
             });
         });
