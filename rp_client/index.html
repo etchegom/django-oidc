@@ -15,6 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://www.sakimura.org/test/openidconnect.js"></script>
 
+    <br>
+    <br>
+    <br>
+    <div id="userinfo">
+    </div>
+
     <script type="text/javascript">
     $(function() {
         var clientInfo = {
@@ -38,7 +44,7 @@
         // Make userinfo request using access_token.
         if (token !== null) {
             $.get('http://localhost:8000/userinfo/?access_token='+token, function( data ) {
-                alert(JSON.stringify(data));
+                $('#userinfo').text(JSON.stringify(data));
             });
         }
 
