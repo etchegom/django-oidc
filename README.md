@@ -56,3 +56,4 @@ https://medium.com/@darutk/new-architecture-of-oauth-2-0-and-openid-connect-impl
 https://medium.com/@darutk/diagrams-of-all-the-openid-connect-flows-6968e3990660
 https://connect2id.com/products/server/docs/api
 https://security.stackexchange.com/questions/129928/oidc-flow-for-spa-and-restful-api
+https://developer.okta.com/blog/2017/07/25/oidc-primer-part-1
