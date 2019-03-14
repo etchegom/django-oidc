@@ -58,6 +58,9 @@ https://connect2id.com/products/server/docs/api
 https://security.stackexchange.com/questions/129928/oidc-flow-for-spa-and-restful-api
 https://developer.okta.com/blog/2017/07/25/oidc-primer-part-1
 
+### Decode JWT token
+
+https://jwt.io/
 
 
 ### Implicit flow
